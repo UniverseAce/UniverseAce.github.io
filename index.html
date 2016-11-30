@@ -166,41 +166,9 @@
       
         <p>#I start my own server on AWS<br>AWS now has a whole year free trail for a personal server. This is the reason that I choose AWS as my personal server provider. (T-T) sooo poor. </p>
 <p>Anyway, AWS provide quite clear and simple way to create a server. I realy like the dashboard of the AWS. </p>
-<p>I have use it for a while last year, but I quit because I was so busy at that time. </p>
-<p>Register is very simple, what you need is a email address, phone number, address, and credit card information. </p>
-<p>Go through all the process, then you can launch your instance. </p>
-<p>Since I have used Ubuntu, I choosed it as my system. </p>
-<p>There are couple of things you may need to pay attention:</p>
-<ol>
-<li><p>How to connect to the server you have establised:</p>
-<p> In the instance management dashboard, right click the instance -&gt; choose the first one: connect</p>
-<p> It will show the method to connect to the server.</p>
-<p> Generally, there is a private key file, you have to ssh connect to the server. </p>
-</li>
-<li><p>There is no default root password in the new system.</p>
-<p> You have to create one. </p>
-<p> Use commond <code>$ sudo su</code></p>
-<p> Then you can go into root model</p>
-<p> Use commond <code># passwd root</code></p>
-<p> And input password and confirm, all good. </p>
-</li>
-<li><p>Install Apache</p>
-<p> Apache is the most common web server. </p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get update</div><div class="line">$ sudo apt-get install apache2</div><div class="line">$ sudo systemctl apache2 start</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<ol>
-<li><p>Network Security Group</p>
-<p> You may can not access your website after configuring Apache webserver. This is because all instance controlled by the Network Security Group. When a instance created, for security reason, it only allows access through SSH.</p>
-<p> Thus, you have to go to instance dashboard, </p>
-<p> and go to left side bar -&gt; Network &amp; Security -&gt; Security Groups.</p>
-<p> Create or Edit a Security rules by right clicking the Security group -&gt; inbound rules</p>
-<p> add HTTP and HTTPS in the rules</p>
-<p> Apply this Security Group to your instance. </p>
-<p> And then you should be able to access your website with browser. </p>
-</li>
-</ol>
-
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2016/11/30/Server/#more">more >></a>
+        </p>
       
     </div>
     <div class="article-info article-info-index">
