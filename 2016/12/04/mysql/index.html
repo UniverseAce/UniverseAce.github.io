@@ -6,17 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://acersblog.info/blog">
-  <title>Tag: diary | AcersBlog</title>
+  <title>Install Mysql and connect with MysqlWorkbench | AcersBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This guy is so lazy and leave nothing">
-<meta property="og:type" content="website">
-<meta property="og:title" content="AcersBlog">
-<meta property="og:url" content="http://acersblog.info/blog/tags/diary/index.html">
+  <meta name="description" content="Install the MysqlMysql is one of the most commen used database in the word, and it perfectly works with PHP.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Install Mysql and connect with MysqlWorkbench">
+<meta property="og:url" content="http://acersblog.info/blog/2016/12/04/mysql/index.html">
 <meta property="og:site_name" content="AcersBlog">
-<meta property="og:description" content="This guy is so lazy and leave nothing">
+<meta property="og:description" content="Install the MysqlMysql is one of the most commen used database in the word, and it perfectly works with PHP.">
+<meta property="og:updated_time" content="2016-12-04T12:23:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AcersBlog">
-<meta name="twitter:description" content="This guy is so lazy and leave nothing">
+<meta name="twitter:title" content="Install Mysql and connect with MysqlWorkbench">
+<meta name="twitter:description" content="Install the MysqlMysql is one of the most commen used database in the word, and it perfectly works with PHP.">
   
     <link rel="alternative" href="/atom.xml" title="AcersBlog" type="application/atom+xml">
   
@@ -144,54 +145,114 @@
 </nav>
 
       <div class="body-wrap">
+        <article id="post-mysql" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
         
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/03/diaryDec3/" class="archive-article-date">
-  	<time datetime="2016-12-03T12:13:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/03/diaryDec3/">Diary of December</a>
+    <h1 class="article-title" itemprop="name">
+      Install Mysql and connect with MysqlWorkbench
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        <a href="/2016/12/04/mysql/" class="archive-article-date">
+  	<time datetime="2016-12-04T11:35:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-04</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Install-the-Mysql"><a href="#Install-the-Mysql" class="headerlink" title="Install the Mysql"></a>Install the Mysql</h1><p>Mysql is one of the most commen used database in the word, and it perfectly works with PHP. </p>
+<a id="more"></a>
+<p>It is very easy to install Mysql in the Ubuntu.<br>Code is below:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get update</div><div class="line"></div><div class="line">$ sudo apt-get upgrade</div><div class="line"></div><div class="line">$ sudo apt-get install mysql-server</div><div class="line"></div><div class="line">$ sudo mysql_secure_installation</div></pre></td></tr></table></figure>
+<p>The first two commands are for update and upgrade for the whole system. </p>
+<p>The 3rd is install mysql server. After installation, you can </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ /etc/init.d/mysql start/stop</div></pre></td></tr></table></figure>
+<p>start or stop service. </p>
+<p>The 4th is a secure process of install mysql. It can provide the basic security configuration. </p>
+<p>There are some important information:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">/usr/bin        - where mysql client and footscript </div><div class="line"></div><div class="line">/usr/sbin       - mysql server</div><div class="line"></div><div class="line">/var/lib/mysql  - database and log [Important]</div></pre></td></tr></table></figure>
+<h1 id="Mysql-Workbench"><a href="#Mysql-Workbench" class="headerlink" title="Mysql Workbench"></a>Mysql Workbench</h1><p>Mysql workbench is a very good mysql management tool with good user interface. </p>
+<p>If you want to connect to the remote mysql database, you still need some configuration. </p>
+<h3 id="what-you-should-have"><a href="#what-you-should-have" class="headerlink" title="what you should have"></a>what you should have</h3><ol>
+<li>mysql server</li>
+<li>remote ip address </li>
+<li>mysql username and password</li>
+<li>mysql workbench (could download from oracle)</li>
+</ol>
+<h3 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h3><ol>
+<li>make sure your mysql server is running well on the server. </li>
+<li>Goes to Server Management pannel and open mysql port, 3306. (This is in your service provide web page)</li>
+<li>Build a new connection in Mysql Workbench, and input remote Ip address, username, and password. Test Connection. </li>
+</ol>
+<h3 id="Potential-Errors"><a href="#Potential-Errors" class="headerlink" title="Potential Errors"></a>Potential Errors</h3><ol>
+<li>Error (61)<br>This is because your server did not open for all ip address. </li>
+</ol>
+<p>What you can do, go to your server.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ netstat -tulpen</div></pre></td></tr></table></figure>
+<p>check the open ip address and port</p>
+<p>And </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf</div></pre></td></tr></table></figure>
+<p>Change</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bind-address = 127.0.0.1</div></pre></td></tr></table></figure>
+<p>to </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bind-address = 0.0.0.0</div></pre></td></tr></table></figure>
+<p>Restart mysql server</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ /etc/init.d/mysql restart</div></pre></td></tr></table></figure>
+<p>After that, you may can login into your remote mysql database. </p>
+<p>However, if you set up prohibit root remote login. </p>
+<p>You can do the following process, go into mysql:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mysql&gt; GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;password&apos; WITH GRANT OPTION;</div><div class="line">mysql&gt; FLUSH PRIVILEGES;</div></pre></td></tr></table></figure>
+<p>The first code give all the rights to root and allow it can login from ‘%’ (means anywhere) with ‘password’ (it will cancel the original password when remotely login), root user can also grant other user.</p>
+<p>The seconde code refresh the privilege and make it useful. </p>
+<p>This is the method to allow root user login into DB remotely. However, it is not very safe to use it. </p>
+<p>Thus, we can create other users to manage DB. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql&gt; CREATE USER &apos;username&apos;@&apos;host&apos; IDENTIFIED BY &apos;password&apos;</div></pre></td></tr></table></figure>
+<p>About user management,<br>There are couples keywords:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CREATE, GRANT, SET, REVOKE, DROP</div></pre></td></tr></table></figure>
+<p>If you want to have profound knowledge, can explore by yourself. </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/diary/">diary</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/">Mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MysqlWorkBench/">MysqlWorkBench</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RemoteConnection/">RemoteConnection</a></li></ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
-  
 
-    
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/12/03/diaryDec3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Diary of December</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
 
 
       </div>
@@ -213,9 +274,9 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
