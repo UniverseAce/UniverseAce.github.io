@@ -1,0 +1,13 @@
+hotmail
+p-options {
+    border: 2px solid rgba(255, 255, 255, 0.38) !important;
+    border-radius: 4px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    top: 18px !important;
+    width: 200px !important;
+}
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0 !important;
+}
+
